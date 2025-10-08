@@ -21,16 +21,24 @@ const randomDiceRoll = () => {
     return roll; // Jeg vil gerne have svaret fra rollet, derfor returner jeg roll.
 }
 
-// Jeg laver variabler til at gemme totals
+/* ------- LEVEL 3 ----------
+Jeg skal lave variabler til at gemme totals
+
+Starter med at sætte totalen til 0 fra start:
 let getTotalPlayer1 = 0; // Variabel til Player1 som kan ændre sig
 let getTotalPlayer2 = 0; // Variabel til Player2 som kan ændre sig
 
+Variabler som jeg har kaldt getTotalPlayer1 og getTotalPlayer2, ser sådan her ud:
+
+getTotalPlayer1 = getTotalPlayer1 + roll1; // Lægger resultatet til totalen
+getTotalPlayer2 = getTotalPlayer2 + roll1; // Lægger resultatet til totalen
+
+De er blevet brugt i min spil, som kan ses længere nede
+*/
 
 /* ------------VERSION MED 2 RUNDER STARTER / NU BRUGT SOM TEST----------------
 
-
-// Hvor mange runder spillet skal have
-const rounds = 2; // Antal runder jeg vil have
+const rounds = 2; // Antal runder jeg vil have.
 
 // Jeg bruger et loop i stedet for at skrive det hele flere gange
 for (let i = 1; i <= rounds; i++) {
@@ -54,9 +62,6 @@ for (let i = 1; i <= rounds; i++) {
 
     getTotalPlayer2 = getTotalPlayer2 + roll2; // Lægger resultatet til totalen
 }
-// Level 3 -  Track scores
-
-// Min plan: Jeg har defineret totalen for Player1 og Player 2 ovenover, så jeg har tænkt mig at logge det med tilhørende tekst.
 
 console.log("----------TOTAL----------")
 
@@ -115,10 +120,12 @@ console.log(player2 + " (Total: " + getTotalPlayer2 + ")"); // Logger totalen fo
 
 // --------------VERSION MED 10 RUNDER SLUTTER---------------------
 
+// ------ AFSLUTNING --------
+
 console.log("----------GAME OVER----------")
 console.log("---------FINAL SCORES---------")
 
-if (getTotalPlayer1 < getTotalPlayer2) {
+if (getTotalPlayer1 < getTotalPlayer2) { // Lavet en if sætning, som gør at den printer
     console.log(player2 + " wins the championship!")
 } else if (getTotalPlayer1 > getTotalPlayer2) {
     console.log(player1 + " wins the championship!")
