@@ -1,30 +1,39 @@
 // 06 - Dice Rolling Championship
 
-// Level 1 - Min plan: bruge prompt funktionen så man kan indsætte sit navn.
+// ----------- LEVEL 1 START ----------
+// Min plan: bruge prompt funktionen så man kan indsætte sit navn.
 
 // Gør så spillerne kan skrive deres navn
 const player1 = prompt("Player 1's name:")
 const player2 = prompt("Player 2's name:")
 
+
 // Skriver "Welcome to the Dice Rolling Championship!" med navnene
 console.log("Welcome to the Dice Rolling Championship!")
 console.log("Player 1: " + player1)
 console.log("Player 2: " + player2)
+// ------------ LEVEL 1 SLUT -----------
 
 
-// Level 2 - Min plan: Lave en funktion som tager et tilfældigt "dice roll"
+// ------------- LEVEL 2 START ----------
+/* Min plan: Lave en funktion som tager et tilfældigt "dice roll"
 // Lave et window.prompt function, som sætter hele funktionen igang
 
-// Laver en funktion som tager et tilfældigt tal fra mit array.
+Laver en funktion som tager et tilfældigt tal fra mit array.
+ */
+
 const randomDiceRoll = () => {
     const roll = Math.floor(Math.random() * 6) + 1;
     return roll; // Jeg vil gerne have svaret fra rollet, derfor returner jeg roll.
 }
+// ------------- LEVEL 2 SLUT ----------
 
-/* ------- LEVEL 3 ----------
+
+/* --------- LEVEL 3 START ------------
 Jeg skal lave variabler til at gemme totals
 
 Starter med at sætte totalen til 0 fra start:
+
 let getTotalPlayer1 = 0; // Variabel til Player1 som kan ændre sig
 let getTotalPlayer2 = 0; // Variabel til Player2 som kan ændre sig
 
@@ -34,7 +43,11 @@ getTotalPlayer1 = getTotalPlayer1 + roll1; // Lægger resultatet til totalen
 getTotalPlayer2 = getTotalPlayer2 + roll1; // Lægger resultatet til totalen
 
 De er blevet brugt i min spil, som kan ses længere nede
+
+---------- LEVEL 3 SLUT ---------
 */
+
+
 
 /* ------------VERSION MED 2 RUNDER STARTER / NU BRUGT SOM TEST----------------
 
@@ -77,12 +90,17 @@ console.log("----------TOTAL----------")
 
 // --------------VERSION MED 10 RUNDER STARTER---------------------
 
+
 console.log("----------COMPLETE GAME----------")
 // Level 4 - Complete games (10 Rounds)
 // Min plan er at lave forLoop som kører 10 runder
 
+let getTotalPlayer1 = 0; // Så total variblen starter på 0
+let getTotalPlayer2 = 0; // Så total variblen starter på 0
 
-for (let i=1; i <= 10; i++) {
+const rounds = 10
+
+for (let i=1; i <= rounds; i++) {
     console.log("--------Round " + i + "--------");
     const resultsPlayer1 = randomDiceRoll();
 
@@ -96,10 +114,11 @@ for (let i=1; i <= 10; i++) {
     console.log(player1 + " rolled: " + roll1 + " (Total: " + getTotalPlayer1 + ")");
 
 
-    const resultsPlayer2 = randomDiceRoll();
+
 
     // Player 2's tur -------
     prompt(player2 + " Press enter to roll the dice"); // Laver et prompt så man skal trykke enter
+    const resultsPlayer2 = randomDiceRoll();
     const roll2 = randomDiceRoll(); // Nu er roll2 det samme som udfaldet af randomDiceRoll
 
     getTotalPlayer2 = getTotalPlayer2 + roll2; // Lægger resultatet til totalen
