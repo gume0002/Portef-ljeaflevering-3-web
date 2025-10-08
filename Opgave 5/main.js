@@ -42,4 +42,25 @@ const resultPlayer2 = randomDiceRoll(); // Nu er resultPlayer1, det samme som ud
     console.log(player2 + " rolled: " + resultPlayer2);
 
 
-// Level 3
+// Level 3 -  Track scores
+// Min plan: Kunne forestille mig jeg skal lave et let variabel som kan ændrer sig efter hvad de slår
+// Måske skal jeg lave en forEach funktion og en sum funktion.
+
+// Variabler for spillerne, så den kan huske deres score.
+
+console.log("--------------------")
+// Player 1 total
+let getTotalPlayer1 = 0; // Variabel til Player1 som kan ændre sig
+getTotalPlayer1 = getTotalPlayer1 + resultPlayer1;
+
+console.log(player1 + " rolled " + resultPlayer1 + " (Total: " + getTotalPlayer1 + ")")
+
+
+// Player 2 total
+let getTotalPlayer2 = 0; // Variabel til Player2 som kan ændre sig
+getTotalPlayer2 = getTotalPlayer2 + resultPlayer2;
+
+console.log(player2 + " rolled " + resultPlayer2 + " (Total: " + getTotalPlayer2 + ")")
+
+
+// Level 4 - Complete games
