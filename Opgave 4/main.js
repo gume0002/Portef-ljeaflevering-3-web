@@ -35,12 +35,12 @@ const average = sum / grades.length; // Gør at vi har en "average" som vi kan b
 // Nu skal jeg lave et forLoop som skal undersøge hvilken kategori som min sum skal sættes i.
 
 if (average > 90) {
-    console.log("The class perfomance is Excellent.")
+    console.log("The class perfomance is Excellent.") // Hvis average > 90
 } else if (average >= 80 && average <= 89) {
-    console.log("The perfomance is Good.")
+    console.log("The perfomance is Good.") // Hvis average er mellem 80 og 89
 } else if (average >= 70 && average <= 79) {
-    console.log("The perfomance is Satisfactory")
+    console.log("The perfomance is Satisfactory") // hvis average er mellem 70 og 79
 } else if (average < 70) {
-    console.log("The perfomance needs Improvement")
+    console.log("The perfomance needs Improvement") //hvis average er under 70.
 }
 
