@@ -1,5 +1,346 @@
-* {
+* { /* STANDARD PADDING OG MARGIN PÅ HELE SIDEN */
     padding: 0;
     margin: 0;
 }
 
+* { /* FONT PÅ HELE SIDEN - TAGET FRA GOOGLE FONTS*/
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+.page-container{ /* PADDING GENNEM HELE SIDEN SOM PÅ WAITLY.EU */
+    padding: 0 24px;
+}
+
+/* -------------NAVBAR STARTER------------*/
+
+.navbar { /* Laver hele navbaren vandret */
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.main-menu-navbar { /* Sætter mine 3 main navbar i den rigtige position */
+    text-align: center;
+    padding: 0 50px;
+}
+
+.main-menu-navbar ul{ /* Gør at de har den rigtige mellemrum og ikke nogen list style. */
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.main-menu-navbar a { /* Fjerner text decoration i navbaren */
+    text-decoration: none;
+    color: black;
+}
+
+.buttons-navbar{ /* Gør så mine nav buttons er i højre side */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.buttons-navbar button{ /* Gør at mine buttons ser flottere ud og har den rigtige form */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.login{ /* Ændrer farven på logjn knappen - Brugt screenshot og søgte på farvekoden */
+    background-color:#D7C5FF;
+}
+
+/* -------------NAVBAR SLUTTER------------*/
+
+/* -------------MAIN STARTER------------*/
+
+/* BILLEDE MED TEKST OVER */
+
+.picture-with-text {
+    position: relative;  /* gør det muligt at placere teksten ovenpå billedet - fået lidt hjælp af chatgpt */
+    height: 100vh; /* fylder hele skærmen */
+}
+
+.hero-image img {
+    position: absolute; /* gør billedet til baggrundslag */
+    width: 100%;
+    height: 85%;
+    filter: brightness(77%); /* gør billedet mørkere, så det passer til WAITLY.EU */
+    z-index: 1; /* her lægger jeg billedet bag teksten - fundet metoden via chatgpt */
+    border-radius: 30px 30px;
+}
+
+/* Tekst ovenpå billedet */
+
+ .hero-text {
+    position: absolute;    /* Det her sætter teksten i den rigtige position i min situation - fået lidt hjælp af chatGPT*/
+    top: 17%; /* Sætter teksten i toppen af billedet, altså 10% ud af de 100% */
+    left: 50%; /* Left 50% sætter det i midten, samme som right 50% */
+    transform: translate(-50%, -50%); /* centrer vandret og lodret - fundet metoden via chatgpt*/
+    text-align: center;
+    color: white;
+    z-index: 2;  /* her lægger jeg teksten foran billedet - fundet metoden via chatgpt */
+    max-width: 800px;
+    max-height: 200px;
+    padding: 20px;
+}
+
+    /* H1 */
+.hero-text h1 {
+    font-size: 60px;
+}
+
+    /* P TEKST */
+.hero-text p {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+/* ---------- SEARCH BAR STARTER----------- */
+
+.search-on-image { /* GENERELT FOR HELE SØGE MULIGHEDEN PÅ BILLEDET */
+    position: absolute; /* Det her sætter teksten i den rigtige position i min situation - fået lidt hjælp af chatGPT */
+    top: 55%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%); /* centrer vandret og lodret - fundet metoden via chatgpt */
+    z-index: 2; /* her lægger jeg teksten foran billedet - fundet metoden via chatgpt */
+    background-color: white;
+    padding: 10px 30px;
+    max-height: 70px;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 45px;
+
+}
+
+/* ------SØGE BOKSEN------ */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 86px;
+}
+
+/* ------SØGE KNAPPEN------ */
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1324; /* Ændrer farven på søge knappen - Brugt screenshot og søgte på farvekoden */
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    color: white;
+}
+
+
+.input-group-searchbar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 180px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 150px;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+
+/* ------------- INFO-SEKTION STARTER ---------------*/
+
+.info-row {
+    position: absolute; /* Sætter den i den rigtige position - fået lidt hjælp af chatGPT*/
+    bottom: 10%; /* Sætter dem i de "sidste" 10% af bunden i billedet */
+
+    left: 50%; /* Sætter det i midten og centreret - fundet ved hjælp af chatGPT*/
+    transform: translateX(-50%); /* Sætter det i midten og centreret - fundet ved hjælp af chatGPT*/
+
+    display: grid;  /* Gør så det bliver 3 lige store kolonner - fundet via ChatGpt - Kunne ik få andet til at virke*/
+    grid-template-columns: repeat(3, 1fr); /* Gør så det bliver 3 lige store kolonner - fundet via ChatGpt - Kunne ik få andet til at virke */
+
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    color: white;
+    z-index: 2; /* her lægger jeg teksten foran billedet - fundet metoden via chatgpt */
+    padding: 20px 0;
+}
+
+/* De tre bokse */
+.flex-left, .flex-middle, .flex-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centrer indhold vertikalt */
+    align-items: center;
+    gap: 10px;
+    height: 100%; /* sørger for at fylde hele rækkerne */
+}
+
+/* Ikoner / Billederne */
+.flex-left img, .flex-middle img, .flex-right img {
+    width: 35px; /* STØRRELSEN PÅ BILLEDERNE */
+}
+
+/* Tekst */
+.flex-left h2, .flex-middle h2, .flex-right h2 { /* Ændrer teksten i min info-row */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.info-row h2{
+    max-width: 220px;
+}
+
+/* ---------------------FOOTER STARTER--------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #18464E;
+    color: white;
+}
+
+.footer-socials{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+.footer-logo{
+    margin-right: 30px;
+    margin-left: 49px;
+}
+
+
+/* ---------------------FOOTER SLUTTER--------------------- */
+
+
+
+
+
+/* --------------------- MOBIL --------------------- */
+
+@media (max-width: 768px) {
+
+    /* -------- NAVBAR -------- */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .main-menu-navbar {
+        text-align: center;
+    }
+
+    .main-menu-navbar ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .buttons-navbar {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    /* -------- BILLEDE MED TEKST SEKTION -------- */
+
+    .picture-with-text {
+        height: 100vh;
+    }
+
+    .hero-text {
+        top: 20%;
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* -------- SEARCH BAR  -------- */
+    .search-on-image {
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: stretch;
+        justify-content: center;
+        background-color: white;
+        border-radius: 30px 30px;
+        width: 80%;
+        padding: 10px 20px;
+        max-width: 400px;
+    }
+
+    .input-group-searchbar, .input-group {
+        width: 100%;
+    }
+
+    input {
+        font-size: 15px;
+    }
+
+    .search-button {
+        align-self: center;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+
+    /* -------- INFO SEKTION -------- */
+    .info-row {
+        display: flex;
+        flex-direction: row;
+        bottom: -10%;
+        width: 90%;
+        gap: 25px;
+        padding: 10px 0;
+    }
+
+    .info-row h2 {
+        font-size: 15px;
+        line-height: 1.4;
+        max-width: 250px;
+    }
+
+    .flex-left img, .flex-middle img, .flex-right img {
+        width: 35px;
+    }
+
+}
